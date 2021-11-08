@@ -58,7 +58,8 @@ def contact(request):
     return render(request, 'news/test.html', {'form': form})
 
 
-class HomeNews(MyMixin, ListView):
+#class HomeNews(MyMixin, ListView):
+class HomeNews(ListView):
     model = News
     template_name = 'news/home_news_list.html'
     context_object_name = 'news'
