@@ -10,7 +10,7 @@ from django.core.mail import send_mail
 
 from .models import News, Category
 from .forms import NewsForm, UserRegisterForm, UserLoginForm, ContactForm
-from .utils import MyMixin
+#from .utils import MyMixin
 
 def register(request):
     if request.method == 'POST':
@@ -63,7 +63,7 @@ class HomeNews(MyMixin, ListView):
     template_name = 'news/home_news_list.html'
     context_object_name = 'news'
     #extra_context = {'title': 'Главная'}
-    mixin_prop = 'hello world'
+    #mixin_prop = 'hello world'
     paginate_by = 2
 
     def get_context_data(self, *, object_list=None, **kwargs):
